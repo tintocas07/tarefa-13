@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<body>
+<style>
+body  {
+  background-image: url("./imagens/background.jpg");
+  background-color: #cccccc;
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+hr {
+border-width: 0px;
+}
+</style>
+<center>
+<h1>Tarefa 13</h1>
+<p style="font-size: 18px;"><b>Faixas Etárias:</b></p>
+<table class="mytable">
+    <tr>
+        <th>Bebé</th>
+        <th>Criança</th>
+        <th>Adolescente</th>
+        <th>Jovem Adulto</th>
+        <th>Adulto</th>
+        <th>Adulto de Meia Idade</th>
+        <th>Idoso</th>
+        <th>Lendário</th>
+        <th>Imortal</th>
+    </tr>
+    <tr>
+        <th>0-2 anos</th>
+        <th>2-12 anos</th>
+        <th>12-16 anos</th>
+        <th>16-18 anos</th>
+        <th>18-50 anos</th>
+        <th>50-65 anos</th>
+        <th>65+ anos</th>
+        <th>100+ anos</th>
+        <th>130+ anos</th>
+    </tr>
+</table>
+<hr>
+<label for "idade">Introduza uma idade:</label>
+<input id="idade" type="number">
+<button onclick="idade()">Verificar</button>
+<p style="font-size: 18px;"><b id="resposta"></b></p>
+<hr>
+<img id="imagem">
+
+<script>
+function idade() {
+    var i
+    i = (document.getElementById("idade").value)
+    if (0 <= i && i <= 2) {
+    document.getElementById("resposta").innerText="És um bebé."
+    document.getElementById("imagem").src="./imagens/bebe.png"
+    } else if (2 <= i && i <= 12) {
+    document.getElementById("resposta").innerText="És uma criança."
+    document.getElementById("imagem").src="./imagens/criança.png"
+    } else if (12 <= i && i <= 16) {
+    document.getElementById("resposta").innerText="És um adolescente."
+    document.getElementById("imagem").src="./imagens/adolescente.png"
+    } else if (16 <= i && i <= 18) {
+    document.getElementById("resposta").innerText="És um jovem adulto."
+    document.getElementById("imagem").src="./imagens/jovem.png"
+    } else if (18 <= i && i <= 50) {
+    document.getElementById("resposta").innerText="És um adulto, começa a pagar impostos."
+    document.getElementById("imagem").src="./imagens/adulto.png"
+    } else if (50 <= i && i <= 65) {
+    document.getElementById("resposta").innerText="És um adulto de meia-idade, estás velho."
+    document.getElementById("imagem").src="./imagens/meia-idade.png"
+    } else if (65 <= i && i <= 100) {
+    document.getElementById("resposta").innerText="És um idoso, estás ainda mais velho."
+    document.getElementById("imagem").src="./imagens/velho.png"
+    } else if (100 <= i && i <= 130) {
+    document.getElementById("resposta").innerText="És lendário, muitos anos de experiência."
+    document.getElementById("imagem").src="./imagens/centenario.png"
+    } else if (130 <= i) {
+    document.getElementById("resposta").innerText="És imortal, baby bye bye bye!"
+    document.getElementById("imagem").src="./imagens/imortal.png"
+    }
+}
+
+</script>
+
+</center>
+</body>
+</html>
